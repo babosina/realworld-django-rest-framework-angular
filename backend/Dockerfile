@@ -12,7 +12,6 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run migrations, seed database, and start server
+# Run migrations and start server
 CMD python manage.py migrate && \
-    python manage.py seed_db && \
     python manage.py runserver 0.0.0.0:8000

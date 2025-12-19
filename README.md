@@ -90,5 +90,16 @@ cd backend && python3 manage.py seed_db
 python backend/manage.py runserver
 ```
 
+# When using the dockerized solution
+- Build the image
+```shell
+docker compose up --build -d
+```
+
+- Seed the DB
+```shell
+docker compose exec backend python manage.py seed_db
+```
+
 Now, your local server should be running, and you can access this Django/Angular application through your web browser
 at [Backend](http://localhost:8000); [Frontend](http://localhost:4200)
